@@ -10,7 +10,8 @@
     <h3>Ingrese los datos de la linea de producción</h3>
 </div>
 <br />
-@using (Html.BeginForm("Carga", "Produccion", FormMethod.Post))
+<!-- using (Html.BeginForm("Carga", "Produccion", FormMethod.Post))-->
+@using (Html.BeginForm())
 {
     <div class="row mb-3">
         <div class="col-md-2">
@@ -20,7 +21,7 @@
             @Html.TextBoxFor(model => model.Fecha, new
             {
                 type = "date"
-           
+
             })
         </div>
     </div>
@@ -68,8 +69,7 @@
     </div>
     <div class="row mb-3">
         <div class="col-md">
-            <button type="submit" class="btn btn-success" onclick="location.href='@Url.Action("GetStudents")'" style="width:220px;">Guardar Producción</button>
-            <input type="submit" value="Create" id="Submit" class="btn btn-default" onclick="location.href='@Url.Action("GetStudents")'" />
+            <input type="submit" class="btn btn-success" style="width:220px;" value="Guardar Producción">
         </div>
     </div>
 }
@@ -88,7 +88,7 @@
             $('#lblCantidadItems').text = "hola";
             //$('#txtCantidad')
         }
-        
+
     </script>
 }
 
