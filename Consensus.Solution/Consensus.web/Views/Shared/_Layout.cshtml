@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Consensus.web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Produccion" asp-action="Carga">Carga Producción</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Informes" asp-action="Pedidos">Informe Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - Consensus.web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        //Permite solo el ingreso de numeros y el punto decimal
+        function fnKeyNumbersOnly() {
+            $(".OnlyNumbers").keypress(function (e) {
+                var charCode = (e.which) ? e.which : e.keyCode;
+                if (charCode == 46) {
+                    //Verifica si ya se ingreso el punto decimal
+                    if (this.value.indexOf('.') === -1) {
+                        return true;
+                    } else {
+                        //e.preventDefault();
+                        return false;
+                    };
+                } else {
+                    if (charCode > 31 && (charCode < 48 || charCode > 57))
+                        //e.preventDefault();
+                        return false;
+                };
+                return true;
+            });
+        }
+
+        //Permite solo el ingreso de numeros y el punto decimal
+        function fnKeyIntegerOnly() {
+            $(".OnlyInteger").keypress(function (e) {
+                var charCode = (e.which) ? e.which : e.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) 
+                    return false;
+                return true;
+            });
+        }
+    </script>
+    
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

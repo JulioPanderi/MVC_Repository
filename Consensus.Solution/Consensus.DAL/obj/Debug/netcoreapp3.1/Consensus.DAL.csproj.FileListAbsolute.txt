@@ -1,0 +1,8 @@
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.DAL\bin\Debug\netcoreapp3.1\Consensus.DAL.deps.json
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.DAL\bin\Debug\netcoreapp3.1\Consensus.DAL.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.DAL\bin\Debug\netcoreapp3.1\Consensus.DAL.pdb
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.DAL\obj\Debug\netcoreapp3.1\Consensus.DAL.AssemblyInfoInputs.cache
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.DAL\obj\Debug\netcoreapp3.1\Consensus.DAL.AssemblyInfo.cs
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.DAL\obj\Debug\netcoreapp3.1\Consensus.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.DAL\obj\Debug\netcoreapp3.1\Consensus.DAL.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.DAL\obj\Debug\netcoreapp3.1\Consensus.DAL.pdb

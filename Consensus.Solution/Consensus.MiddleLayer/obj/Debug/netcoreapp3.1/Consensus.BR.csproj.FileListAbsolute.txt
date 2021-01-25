@@ -1,0 +1,14 @@
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\bin\Debug\netcoreapp3.1\Consensus.BR.deps.json
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\bin\Debug\netcoreapp3.1\Consensus.BR.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\bin\Debug\netcoreapp3.1\Consensus.BR.pdb
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\obj\Debug\netcoreapp3.1\Consensus.BR.AssemblyInfoInputs.cache
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\obj\Debug\netcoreapp3.1\Consensus.BR.AssemblyInfo.cs
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\obj\Debug\netcoreapp3.1\Consensus.BR.csproj.CoreCompileInputs.cache
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\obj\Debug\netcoreapp3.1\Consensus.BR.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\obj\Debug\netcoreapp3.1\Consensus.BR.pdb
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\obj\Debug\netcoreapp3.1\Consensus.BR.csprojAssemblyReference.cache
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\bin\Debug\netcoreapp3.1\Consensus.DAL.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\bin\Debug\netcoreapp3.1\Consensus.DAL.pdb
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\obj\Debug\netcoreapp3.1\Consensus.BR.csproj.CopyComplete
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\bin\Debug\netcoreapp3.1\Consensus.Repository.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.MiddleLayer\bin\Debug\netcoreapp3.1\Consensus.Repository.pdb

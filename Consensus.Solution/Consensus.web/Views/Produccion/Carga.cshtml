@@ -1,0 +1,127 @@
+﻿@model ProduccionModel
+@{
+    ViewData["Title"] = "Carga de Producción Diaria";
+}
+<br />
+<div class="text-center">
+    <h1 class="display-4">Carga de Producción Diaria</h1>
+</div>
+<div class="text-center container-fluid">
+    <h3>Ingrese los datos de la linea de producción</h3>
+</div>
+<br />
+@using (Html.BeginForm("Carga", "Produccion", FormMethod.Post))
+{
+    <div class="row mb-3">
+        <div class="col-md-2">
+            Fecha:&nbsp;
+        </div>
+        <div class="col-md-10">
+            <input id="txtFecha" type="date" bind="@prod.Fecha">
+        </div>
+    </div>
+    <hr mb-3>
+    <div class="row mb-3">
+        <div class="col-md-2">
+            Figura:&nbsp;
+        </div>
+        <div class="col-md-10">
+            @Html.DropDownListFor(f => f.IdFigura, (IEnumerable<SelectListItem>)ViewBag.Figuras, "Seleccione una figura")
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-2">
+            Combinación:&nbsp;
+        </div>
+        <div class="col-md-10">
+            <input type="text" id="txtCombinacion" maxlength="7" class="OnlyInteger" bind="@prod.Combinacion" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-2">
+            Cantidad sets:&nbsp;
+        </div>
+        <div class="col-md-10">
+            <input type="text" id="txtCantidad" maxlength="7" class="OnlyInteger" bind="@prod.CantidadCom" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-2">
+            Cantidad piezas:&nbsp;
+        </div>
+        <div class="col-md-10">
+            <label id="lblCantidadItems">@string.Format("{0:g}", @prod.Combinacion * @prod.CantidadCom)</label>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md">
+            <button type="submit" class="btn btn-success" onclick="@(async () => await SaveOrderMasters())" style="width:220px;">Save</button>
+        </div>
+    </div>
+
+
+}
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>
+                Figura
+            </th>
+            <th>
+                Combinación
+            </th>
+            <th>
+                Total
+            </th>
+            <th>
+                Costo
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < ((List<ProduccionDetalleModel>)ViewBag.Detalle).Count; i++)
+        {
+            <tr>
+                <td>
+                    Model.Detalle[i].Figura;
+                </td>
+                <td>
+                    Model.Detalle[i].Combinacion;
+                </td>
+                <td>
+                    Model.Detalle[i].Cantidad;
+                </td>
+                <td>
+                    Model.Detalle[i].Precio;
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts {
+    <script>
+        fnKeyIntegerOnly();
+        fnKeyNumbersOnly();
+    </script>
+}
+
+@functions {
+    ProduccionModel prod = new ProduccionModel();
+    ProduccionDetalleModel det = new ProduccionDetalleModel();
+    List<ProduccionDetalleModel> listaDet = new List<ProduccionDetalleModel>();
+
+    protected async Task SaveDetailInList()
+    {
+        decimal precioFigura = ( Model.Figuras.ElementAt(1)
+        det.Cantidad = prod.Cantidad
+        det = new ProduccionDetalleModel();
+    }
+
+}
+
