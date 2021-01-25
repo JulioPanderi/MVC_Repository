@@ -11,7 +11,7 @@
 </div>
 <br />
 <!-- using (Html.BeginForm("Carga", "Produccion", FormMethod.Post))-->
-@using (Html.BeginForm())
+@using (Html.BeginForm("Save", "Carga", Model, FormMethod.Post))
 {
     <div class="row mb-3">
         <div class="col-md-2">

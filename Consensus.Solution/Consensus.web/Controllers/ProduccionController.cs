@@ -47,7 +47,8 @@ namespace Consensus.WEB.Controllers
                     }).ToList();
         }
         
-        public IActionResult Carga(ProduccionModel model)
+        [HttpPost]
+        public IActionResult Save(ProduccionModel model)
         {
             Entidades.ProduccionDiaria prod = new ProduccionDiaria();
             decimal costo = produccionService.GetFigura(model.IdFigura).Result.Costo;
