@@ -60,7 +60,7 @@
     </div>
     <div class="row mb-3">
         <div class="col-md">
-            <button type="submit" class="btn btn-success" onclick="@(async () => await SaveOrderMasters())" style="width:220px;">Save</button>
+            <!-- <button type="submit" class="btn btn-success" onclick="(async () => await SaveOrderMasters())" style="width:220px;">Save</button> -->
         </div>
     </div>
 
@@ -118,8 +118,8 @@
 
     protected async Task SaveDetailInList()
     {
-        decimal precioFigura = ( Model.Figuras.ElementAt(1)
-        det.Cantidad = prod.Cantidad
+        //decimal precioFigura = (Figura)(Model.Figuras.ElementAt(1))
+        //det.Cantidad = prod.Cantidad;
         det = new ProduccionDetalleModel();
     }
 

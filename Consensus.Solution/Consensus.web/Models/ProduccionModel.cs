@@ -36,7 +36,20 @@ namespace Consensus.WEB.Models
                 return Detalle.Sum(det => det.PrecioTotal);
             }
         }
-        public IEnumerable<SelectListItem> ListaFiguras { get; }
+        public IEnumerable<SelectListItem> ListaFiguras
+        {
+            get
+            {
+                var retValue = Figuras.Select(x => new SelectListItem
+                {
+                    Value = x.IdFigura.ToString(),
+                    Text = x.Nombre + " (" + String.Format("{ 0:0.00 }" + ")", x.Costo)
+                }
+                ).ToList();
+                return retValue;
+                //return Detalle.Sum(det => det.PrecioTotal);
+            }
+        }
 
         public List<FiguraModel> Figuras { get; set; }
     }
