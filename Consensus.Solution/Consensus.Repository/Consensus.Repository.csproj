@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Consensus.DAL\Consensus.DAL.csproj" />
+    <ProjectReference Include="..\Consensus.Entidades\Consensus.Entidades.csproj" />
   </ItemGroup>
 
 </Project>

@@ -17,7 +17,11 @@
             Fecha:&nbsp;
         </div>
         <div class="col-md-10">
-            <input id="txtFecha" type="date" bind="@prod.Fecha">
+            @Html.TextBoxFor(model => model.Fecha, new
+            {
+                type = "date"
+           
+            })
         </div>
     </div>
     <hr mb-3>
@@ -26,7 +30,7 @@
             Figura:&nbsp;
         </div>
         <div class="col-md-10">
-            @Html.DropDownListFor(f => f.IdFigura, (IEnumerable<SelectListItem>)ViewBag.Figuras, "Seleccione una figura")
+            @Html.DropDownListFor(f => f.IdFigura, Model.Figuras, "Seleccione una figura")
         </div>
     </div>
     <div class="row mb-3">
@@ -34,7 +38,13 @@
             Combinación:&nbsp;
         </div>
         <div class="col-md-10">
-            <input type="text" id="txtCombinacion" maxlength="7" class="OnlyInteger" bind="@prod.Combinacion" />
+            @Html.TextBoxFor(model => model.Combinacion, new
+            {
+                type = "text",
+                @class = "OnlyInteger",
+                //onblur = "fnMostrarValores();",
+                @maxlength = "7"
+            })
         </div>
     </div>
     <div class="row mb-3">
@@ -42,15 +52,13 @@
             Cantidad sets:&nbsp;
         </div>
         <div class="col-md-10">
-            <input type="text" id="txtCantidad" maxlength="7" class="OnlyInteger" bind="@prod.CantidadCom" />
-        </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col-md-2">
-            Cantidad piezas:&nbsp;
-        </div>
-        <div class="col-md-10">
-            <label id="lblCantidadItems">@string.Format("{0:g}", @prod.Combinacion * @prod.CantidadCom)</label>
+            @Html.TextBoxFor(model => model.CantidadSets, new
+            {
+                type = "text",
+                @class = "OnlyInteger",
+                //onblur = "fnMostrarValores();",
+                @maxlength = "7"
+            })
         </div>
     </div>
     <div class="row mb-3">
@@ -60,68 +68,27 @@
     </div>
     <div class="row mb-3">
         <div class="col-md">
-            <!-- <button type="submit" class="btn btn-success" onclick="(async () => await SaveOrderMasters())" style="width:220px;">Save</button> -->
+            <button type="submit" class="btn btn-success" onclick="location.href='@Url.Action("GetStudents")'" style="width:220px;">Guardar Producción</button>
+            <input type="submit" value="Create" id="Submit" class="btn btn-default" onclick="location.href='@Url.Action("GetStudents")'" />
         </div>
     </div>
-
-
 }
 <br />
-<table>
-    <thead>
-        <tr>
-            <th>
-                Figura
-            </th>
-            <th>
-                Combinación
-            </th>
-            <th>
-                Total
-            </th>
-            <th>
-                Costo
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @for (int i = 0; i < ((List<ProduccionDetalleModel>)ViewBag.Detalle).Count; i++)
-        {
-            <tr>
-                <td>
-                    Model.Detalle[i].Figura;
-                </td>
-                <td>
-                    Model.Detalle[i].Combinacion;
-                </td>
-                <td>
-                    Model.Detalle[i].Cantidad;
-                </td>
-                <td>
-                    Model.Detalle[i].Precio;
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
 @section scripts {
     <script>
         fnKeyIntegerOnly();
         fnKeyNumbersOnly();
+
+        function fnMostrarValores() {
+            var vImporte = 0;
+            vImporte = Number($("#lblCantidadItems").text());
+            vImporte = vImporte * Number($("#txtCantidad").text());
+            vImporte = Math.round((vImporte + Number.EPSILON) * 100) / 100;
+            alert(vImporte);
+            $('#lblCantidadItems').text = "hola";
+            //$('#txtCantidad')
+        }
+        
     </script>
-}
-
-@functions {
-    ProduccionModel prod = new ProduccionModel();
-    ProduccionDetalleModel det = new ProduccionDetalleModel();
-    List<ProduccionDetalleModel> listaDet = new List<ProduccionDetalleModel>();
-
-    protected async Task SaveDetailInList()
-    {
-        //decimal precioFigura = (Figura)(Model.Figuras.ElementAt(1))
-        //det.Cantidad = prod.Cantidad;
-        det = new ProduccionDetalleModel();
-    }
-
 }
 

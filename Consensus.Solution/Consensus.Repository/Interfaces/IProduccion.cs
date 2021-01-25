@@ -1,4 +1,4 @@
-﻿using Consensus.Repository.Entities;
+﻿using Consensus.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,10 +7,10 @@ namespace Consensus.Repository.Interfaces
 {
     public interface IProduccion
     {
-        public Task<int> AddProduccionDiaria(List<ProduccionDiaria> prod, DateTime Fecha);
-        public Task<List<ProduccionDiaria>> GetAll();
-        public Task<ProduccionDiaria> GetByFecha(DateTime Fecha);
-        public Task<ProduccionDiaria> GetByFecha(DateTime Desde, DateTime Hasta);
-        public Task<ProduccionDiaria> GetById(int IdProduccion);
+        Task<int> AddProduccionDiaria(ProduccionDiaria prod);
+        Task<List<ProduccionDiaria>> GetAll();
+        Task<ProduccionDiaria> GetByFecha(DateTime Fecha);
+        Task<List<ProduccionDiaria>> GetByFecha(DateTime Desde, DateTime Hasta);
+        Task<ProduccionDiaria> GetById(int IdProduccion);
     }
 }

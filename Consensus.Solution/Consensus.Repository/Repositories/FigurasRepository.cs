@@ -1,4 +1,4 @@
-﻿using Consensus.Repository.Entities;
+﻿using Consensus.Entidades;
 using System;
 using System.Collections.Generic;
 using Consensus.DAL.DataContext;

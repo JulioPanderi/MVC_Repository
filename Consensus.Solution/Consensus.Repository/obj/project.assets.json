@@ -1585,6 +1585,16 @@
         "runtime": {
           "bin/placeholder/Consensus.DAL.dll": {}
         }
+      },
+      "Consensus.Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Consensus.Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Consensus.Entidades.dll": {}
+        }
       }
     }
   },
@@ -5909,11 +5919,17 @@
       "type": "project",
       "path": "../Consensus.DAL/Consensus.DAL.csproj",
       "msbuildProject": "../Consensus.DAL/Consensus.DAL.csproj"
+    },
+    "Consensus.Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Consensus.Entidades/Consensus.Entidades.csproj",
+      "msbuildProject": "../Consensus.Entidades/Consensus.Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Consensus.DAL >= 1.0.0",
+      "Consensus.Entidades >= 1.0.0",
       "System.Threading.Tasks >= 4.3.0"
     ]
   },
@@ -5950,6 +5966,9 @@
           "projectReferences": {
             "C:\\Users\\Julio\\source\\repos\\Consensus\\Consensus.Solution\\Consensus.DAL\\Consensus.DAL.csproj": {
               "projectPath": "C:\\Users\\Julio\\source\\repos\\Consensus\\Consensus.Solution\\Consensus.DAL\\Consensus.DAL.csproj"
+            },
+            "C:\\Users\\Julio\\source\\repos\\Consensus\\Consensus.Solution\\Consensus.Entidades\\Consensus.Entidades.csproj": {
+              "projectPath": "C:\\Users\\Julio\\source\\repos\\Consensus\\Consensus.Solution\\Consensus.Entidades\\Consensus.Entidades.csproj"
             }
           }
         }

@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Consensus.Entidades\Consensus.Entidades.csproj" />
     <ProjectReference Include="..\Consensus.Repository\Consensus.Repository.csproj" />
   </ItemGroup>
 

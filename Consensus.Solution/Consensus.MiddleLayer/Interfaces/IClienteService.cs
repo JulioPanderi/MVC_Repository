@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Consensus.Repository.Entities;
+using Consensus.Entidades;
 using Consensus.Repository.Repositories;
 using Consensus.Repository.Interfaces;
 using System.Threading.Tasks;
@@ -11,7 +11,7 @@ namespace Consensus.BR.Interfaces
 {
     public interface IClienteService
     {
-        public Task<List<Cliente>> GetClientes();
-        public Task<Cliente> GetCliente(int IdCliente);
+        Task<List<Cliente>> GetClientes();
+        Task<Cliente> GetCliente(int IdCliente);
     }
 }

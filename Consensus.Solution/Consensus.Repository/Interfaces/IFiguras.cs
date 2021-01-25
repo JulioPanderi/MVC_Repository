@@ -1,4 +1,4 @@
-﻿using Consensus.Repository.Entities;
+﻿using Consensus.Entidades;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

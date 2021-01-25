@@ -1,5 +1,5 @@
-﻿using Consensus.Repository.Repositories;
-using Consensus.Repository.Entities;
+﻿using Consensus.BR.Services;
+using Consensus.Entidades;
 using Consensus.WEB.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -15,6 +15,8 @@ namespace Consensus.WEB.Controllers
     public class ProduccionController : Controller
     {
         private readonly ILogger<ProduccionController> _logger;
+        //private readonly BR.Interfaces.IProduccionService produccionService;
+        private readonly BR.Interfaces.IProduccionService produccionService = new ProduccionService();
 
         public ProduccionController(ILogger<ProduccionController> logger)
         {
@@ -23,9 +25,9 @@ namespace Consensus.WEB.Controllers
 
         public IActionResult Carga()
         {
-            GetFiguras();
-            ViewBag.Detalle = new List<ProduccionDetalleModel>();
-            return View();
+            ProduccionModel model = new ProduccionModel();
+            model.Figuras = GetFiguras();
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -34,18 +36,31 @@ namespace Consensus.WEB.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public void GetFiguras()
+        public IEnumerable<SelectListItem> GetFiguras()
         {
-            FiguraRepository repository = new FiguraRepository();
-            List<Figura> lista = repository.GetAll().Result;
-            /*
-            ViewBag.Figuras = lista.Select(x => new SelectListItem
-                {
-                    Value = x.IdFigura.ToString() ,
-                    Text = x.Nombre + " (" + String.Format("{ 0:0.00 }" + ")", x.Costo)
-            }
-            ).ToList();
-            */
+            List<Figura> lista = produccionService.GetFiguras().Result;
+            return (from f in lista
+                    select new SelectListItem
+                    {
+                        Value = f.IdFigura.ToString(),
+                        Text = f.Nombre 
+                    }).ToList();
+        }
+        
+        public IActionResult Save(ProduccionModel model)
+        {
+            Entidades.ProduccionDiaria prod = new ProduccionDiaria();
+            decimal costo = produccionService.GetFigura(model.IdFigura).Result.Costo;
+            
+            prod.IdFigura = model.IdFigura;
+            prod.CantidadSets = model.CantidadSets;
+            prod.Combinacion = model.Combinacion;
+            prod.Fecha = model.Fecha;
+            prod.PrecioSet = 1;
+            prod.PrecioTotal = (prod.CantidadSets * prod.Combinacion) * costo;
+            
+            produccionService.GuardarProducion(prod);
+            return View(model);
         }
     }
 }

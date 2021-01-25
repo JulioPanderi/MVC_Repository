@@ -10,3 +10,5 @@ C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.Repository\ob
 C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.Repository\bin\Debug\netcoreapp3.1\Consensus.DAL.dll
 C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.Repository\bin\Debug\netcoreapp3.1\Consensus.DAL.pdb
 C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.Repository\obj\Debug\netcoreapp3.1\Consensus.Repository.csproj.CopyComplete
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.Repository\bin\Debug\netcoreapp3.1\Consensus.Entidades.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.Repository\bin\Debug\netcoreapp3.1\Consensus.Entidades.pdb

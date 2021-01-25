@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Consensus.Repository.Entities;
+using Consensus.Entidades;
 using Consensus.Repository.Repositories;
 using Consensus.Repository.Interfaces;
 using System.Threading.Tasks;

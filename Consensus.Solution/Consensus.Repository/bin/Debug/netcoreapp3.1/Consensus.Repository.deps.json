@@ -9,6 +9,7 @@
       "Consensus.Repository/1.0.0": {
         "dependencies": {
           "Consensus.DAL": "1.0.0",
+          "Consensus.Entidades": "1.0.0",
           "System.Threading.Tasks": "4.3.0"
         },
         "runtime": {
@@ -1145,6 +1146,11 @@
         "runtime": {
           "Consensus.DAL.dll": {}
         }
+      },
+      "Consensus.Entidades/1.0.0": {
+        "runtime": {
+          "Consensus.Entidades.dll": {}
+        }
       }
     }
   },
@@ -1862,6 +1868,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "Consensus.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Consensus.Entidades/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

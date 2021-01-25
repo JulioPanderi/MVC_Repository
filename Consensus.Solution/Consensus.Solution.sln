@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consensus.Repository", "Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consensus.RestAPI", "Consensus.RestAPI\Consensus.RestAPI.csproj", "{985F1570-1352-43CC-935D-F5769E62EE5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consensus.Entidades", "Consensus.Entidades\Consensus.Entidades.csproj", "{80E4629A-B3B0-4FDD-B319-A972AEE2C32C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{985F1570-1352-43CC-935D-F5769E62EE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{985F1570-1352-43CC-935D-F5769E62EE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{985F1570-1352-43CC-935D-F5769E62EE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E4629A-B3B0-4FDD-B319-A972AEE2C32C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E4629A-B3B0-4FDD-B319-A972AEE2C32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E4629A-B3B0-4FDD-B319-A972AEE2C32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E4629A-B3B0-4FDD-B319-A972AEE2C32C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

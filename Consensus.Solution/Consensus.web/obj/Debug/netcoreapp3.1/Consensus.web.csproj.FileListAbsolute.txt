@@ -88,3 +88,10 @@ C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug
 C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug\netcoreapp3.1\Consensus.Repository.dll
 C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug\netcoreapp3.1\Consensus.Repository.pdb
 C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\obj\Debug\netcoreapp3.1\Razor\Views\Produccion\Carga.cshtml.g.cs
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug\netcoreapp3.1\Consensus.BR.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug\netcoreapp3.1\Consensus.Entidades.dll
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug\netcoreapp3.1\Consensus.BR.pdb
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.web\bin\Debug\netcoreapp3.1\Consensus.Entidades.pdb

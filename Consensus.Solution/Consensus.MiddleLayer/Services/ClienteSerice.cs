@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Consensus.Repository.Entities;
+using Consensus.Entidades;
 using Consensus.Repository.Repositories;
 using Consensus.Repository.Interfaces;
 using Consensus.BR.Interfaces;

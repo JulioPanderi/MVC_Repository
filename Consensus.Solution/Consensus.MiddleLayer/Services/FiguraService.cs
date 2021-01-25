@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Consensus.Repository.Entities;
+using Consensus.Entidades;
 using Consensus.Repository.Repositories;
 using Consensus.Repository.Interfaces;
 using System.Threading.Tasks;
+using Consensus.BR.Interfaces;
 
 namespace Consensus.BR.Services
 {
-    public class FiguraService
+    public class FiguraService : IFiguraService
     {
         public async Task<List<Figura>> GetFiguras()
         {

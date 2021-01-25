@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Consensus.web")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Consensus.WEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Consensus.web")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Consensus.web")]
+[assembly: System.Reflection.AssemblyProductAttribute("Consensus.WEB")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Consensus.WEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
