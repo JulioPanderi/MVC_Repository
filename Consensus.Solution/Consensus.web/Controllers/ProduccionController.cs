@@ -48,19 +48,34 @@ namespace Consensus.WEB.Controllers
         }
         
         [HttpPost]
-        public IActionResult Save(ProduccionModel model)
+        public IActionResult Carga(ProduccionModel model)
         {
-            Entidades.ProduccionDiaria prod = new ProduccionDiaria();
-            decimal costo = produccionService.GetFigura(model.IdFigura).Result.Costo;
-            
-            prod.IdFigura = model.IdFigura;
-            prod.CantidadSets = model.CantidadSets;
-            prod.Combinacion = model.Combinacion;
-            prod.Fecha = model.Fecha;
-            prod.PrecioSet = 1;
-            prod.PrecioTotal = (prod.CantidadSets * prod.Combinacion) * costo;
-            
-            produccionService.GuardarProducion(prod);
+            model.Figuras = GetFiguras();
+            if (ModelState.IsValid)
+            {
+                Entidades.ProduccionDiaria aux = produccionService.GetProduccionDiaria(model.Fecha).Result;
+                if (aux != null)
+                {
+                    ModelState.AddModelError("Fecha", "Ya existe una producción para la fecha ingresada");
+                }
+                else
+                { 
+                    Entidades.ProduccionDiaria prod = new ProduccionDiaria();
+                    decimal costo = produccionService.GetFigura(model.IdFigura).Result.Costo;
+                    int idProd;
+
+                    prod.IdFigura = model.IdFigura;
+                    prod.CantidadSets = model.CantidadSets;
+                    prod.Combinacion = model.Combinacion;
+                    prod.CantidadTotal = model.CantidadSets * model.Combinacion;
+                    prod.Fecha = model.Fecha;
+                    prod.PrecioSet = costo * model.Combinacion;
+                    prod.PrecioTotal = (prod.CantidadSets * prod.Combinacion) * costo;
+
+                    idProd = produccionService.GuardarProducion(prod).Result;
+                    return RedirectToAction("Carga", "Produccion");
+                }
+            }
             return View(model);
         }
     }

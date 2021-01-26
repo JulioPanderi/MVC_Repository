@@ -120,7 +120,6 @@ namespace Consensus.Repository.Repositories
                 {
                     DAL.Entities.ProduccionDiaria p = new DAL.Entities.ProduccionDiaria();  
 
-                    p.IdProduccion = prod.IdProduccion;
                     p.IdFigura = prod.IdFigura;
                     p.Fecha = prod.Fecha;
                     p.CantidadSets = prod.CantidadSets;
@@ -129,8 +128,15 @@ namespace Consensus.Repository.Repositories
                     p.PrecioSet = prod.PrecioSet;
                     p.PrecioTotal = prod.PrecioTotal;
 
-                    dbContext.Add(p);
-                    dbContext.SaveChanges();
+                    try
+                    {
+                        await dbContext.ProduccionesDiaria.AddAsync(p);
+                        await dbContext.SaveChangesAsync();
+                    }
+                    catch (Exception ex)
+                    {
+                        //Log exception
+                    }
                     retValue = p.IdProduccion;
                 }
             }

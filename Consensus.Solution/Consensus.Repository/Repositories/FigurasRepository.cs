@@ -40,7 +40,8 @@ namespace Consensus.Repository.Repositories
                             select new Figura
                             {
                                 IdFigura = c.IdFigura,
-                                Nombre = c.Nombre
+                                Nombre = c.Nombre,
+                                Costo = c.Costo
                             }).FirstOrDefault();
 
             }
@@ -57,9 +58,9 @@ namespace Consensus.Repository.Repositories
                             select new Figura
                             {
                                 IdFigura = c.IdFigura,
-                                Nombre = c.Nombre
+                                Nombre = c.Nombre,
+                                Costo = c.Costo
                             }).ToList();
-
             }
             return retValue;
         }

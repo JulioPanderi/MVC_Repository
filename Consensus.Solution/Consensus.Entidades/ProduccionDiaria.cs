@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Consensus.Entidades
 {
-    public class ProduccionDiaria
+    public class ProduccionDiaria 
     {
-        public int IdProduccion { get; set; }
-        public DateTime Fecha { get; set; }
         public int IdFigura { get; set; }
         public string Figura { get; set; }
         public int Combinacion { get; set; }
@@ -16,5 +12,8 @@ namespace Consensus.Entidades
         public int CantidadTotal { get; set; }
         public decimal PrecioSet { get; set; }
         public decimal PrecioTotal { get; set; }
+        public int IdProduccion { get; set; }
+        public DateTime Fecha { get; set; }
+        
     }
 }

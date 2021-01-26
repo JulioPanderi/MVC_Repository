@@ -33,7 +33,8 @@ namespace Consensus.DAL.DataContext
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<OrdenPedido> OrdenesPedido { get; set; }
         public DbSet<ProduccionDiaria> ProduccionesDiaria { get; set; }
-       
+        public DbSet<vResumenDiarioProduccion> vResumenDiarioProducciones { get; set; }
+
         #endregion
     }
 }

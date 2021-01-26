@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Consensus.BR.Interfaces;
+using Consensus.BR.Services;
 
 namespace Consensus.WEB
 {
@@ -24,6 +26,11 @@ namespace Consensus.WEB
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //Servicios
+            services.AddTransient<IProduccionService, ProduccionService>();
+            services.AddTransient<IClienteService, ClienteService>();
+            services.AddTransient<IFiguraService, FiguraService>();
+            services.AddTransient<IOrdenPedidoService, OrdenPedidoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

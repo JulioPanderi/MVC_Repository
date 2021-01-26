@@ -10,8 +10,7 @@
     <h3>Ingrese los datos de la linea de producción</h3>
 </div>
 <br />
-<!-- using (Html.BeginForm("Carga", "Produccion", FormMethod.Post))-->
-@using (Html.BeginForm("Save", "Carga", Model, FormMethod.Post))
+@using (Html.BeginForm("Carga", "Produccion", Model, FormMethod.Post))
 {
     <div class="row mb-3">
         <div class="col-md-2">
@@ -23,6 +22,7 @@
                 type = "date"
 
             })
+            @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
         </div>
     </div>
     <hr mb-3>
@@ -32,6 +32,7 @@
         </div>
         <div class="col-md-10">
             @Html.DropDownListFor(f => f.IdFigura, Model.Figuras, "Seleccione una figura")
+            @Html.ValidationMessageFor(model => model.IdFigura, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="row mb-3">
@@ -43,9 +44,9 @@
             {
                 type = "text",
                 @class = "OnlyInteger",
-                //onblur = "fnMostrarValores();",
                 @maxlength = "7"
             })
+            @Html.ValidationMessageFor(model => model.Combinacion, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="row mb-3">
@@ -57,9 +58,9 @@
             {
                 type = "text",
                 @class = "OnlyInteger",
-                //onblur = "fnMostrarValores();",
                 @maxlength = "7"
             })
+            @Html.ValidationMessageFor(model => model.CantidadSets, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="row mb-3">
@@ -72,23 +73,17 @@
             <input type="submit" class="btn btn-success" style="width:220px;" value="Guardar Producción">
         </div>
     </div>
+    <div class="row mb-3">
+        <div class="col-md">
+            
+        </div>
+    </div>
 }
 <br />
 @section scripts {
     <script>
         fnKeyIntegerOnly();
         fnKeyNumbersOnly();
-
-        function fnMostrarValores() {
-            var vImporte = 0;
-            vImporte = Number($("#lblCantidadItems").text());
-            vImporte = vImporte * Number($("#txtCantidad").text());
-            vImporte = Math.round((vImporte + Number.EPSILON) * 100) / 100;
-            alert(vImporte);
-            $('#lblCantidadItems').text = "hola";
-            //$('#txtCantidad')
-        }
-
     </script>
 }
 

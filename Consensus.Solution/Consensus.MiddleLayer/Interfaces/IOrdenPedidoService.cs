@@ -4,7 +4,7 @@ using Consensus.Entidades;
 using Consensus.Repository.Repositories;
 using System.Threading.Tasks;
 
-namespace Consensus.BR.Contracts
+namespace Consensus.BR.Interfaces
 {
     public interface IOrdenPedidoService
     {

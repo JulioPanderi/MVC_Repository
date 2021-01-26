@@ -17,3 +17,4 @@ C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.RestAPI\obj\D
 C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.RestAPI\obj\Debug\netcoreapp3.1\Consensus.RestAPI.dll
 C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.RestAPI\obj\Debug\netcoreapp3.1\Consensus.RestAPI.pdb
 C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.RestAPI\obj\Debug\netcoreapp3.1\Consensus.RestAPI.genruntimeconfig.cache
+C:\Users\Julio\source\repos\Consensus\Consensus.Solution\Consensus.RestAPI\obj\Debug\netcoreapp3.1\Consensus.RestAPI.csprojAssemblyReference.cache
